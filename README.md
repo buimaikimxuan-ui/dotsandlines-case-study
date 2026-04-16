@@ -1,2 +1,1 @@
-# dotsandlines-case-study
-Case Study for a Design System for Web Development
+dots and lines case study
