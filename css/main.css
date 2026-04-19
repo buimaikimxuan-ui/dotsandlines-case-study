@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 25rem;
+    font-size: 7rem;
     font-weight: 650;
 }
 
@@ -53,9 +53,11 @@ img {
     font-size: 2rem;
     font-weight: 550;
 }
+
 /**
 *Components
 */
+
 .components__name {
     font-size: 2rem;
     font-weight: 550;
@@ -76,6 +78,10 @@ img {
     margin: 20px;
     padding: 10px;
 }
+
+/**
+*Components - NAVBAR
+*/
 
 .main-nav {
     width: 100%;
@@ -113,4 +119,84 @@ img {
 
 .main-nav__menu a:hover {
   text-decoration: underline;
+}
+
+/**
+*Components - HERO
+*/
+.hero__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: Inter, sans-serif;
+}
+
+.hero__static {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.hero__viewport {
+  height: 6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__word-track {
+  display: flex;
+  flex-direction: column;
+
+  animation: slideUp 6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero__word-track span {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* KEY ANIMATION */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-87.5%);
+  }
+}
+/**
+*Components - COVER
+*/
+.cover__text {
+    font-size: 7rem;
+    font-weight: 650;
+}
+
+.cover__img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+/**
+*Components - CLIENT STRIP
+*/
+
+
+/**
+*Components - CURSOR
+*/
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }

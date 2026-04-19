@@ -15,6 +15,7 @@
   <body>
     <h1 class="page__heading">Web Components</h1>
 
+<!-- TYPOGRAPHY -->
     <h2>Typography Default</h2>
     <article class="components">
         <h3 class="components__name">body</h3>
@@ -30,6 +31,8 @@
     </div>
     </article>
 
+<!-- COMPONENTS -->
+<!-- COMPONENTS HEADING -->
     <article class="components">
         <h3 class="components__name">heading (h1, h2, h3...)</h3>
         <div class="components__img">
@@ -39,33 +42,123 @@
             <img srcset="img/head2.png 2x" src="img/head4.png" alt="Heading 4"/>
         </div>
         <div class="components__code">
-            <h1>and solutions</h1>
+            <h1>and<br>solutions</h1>
             <h2>Was wir machen</h2>
             <h3>List Holding</h3>
             <h4>Worauf wir stolz sind</h4>
     </div>
     </article>
 
-    <article class="navbar">
+<!-- COMPONENTS MAIN NAV-->
+    <article class="components">
         <h3 class="components__name">Nav Bar</h3>
         <div class="components__img">
-        <img srcset="img/main-nav.png 2x" src="img/main_nav.png" alt="Nav Bar"/>
+            <img srcset="img/main_nav.png 2x" src="img/main_nav.png" alt="Nav Bar"/>
         </div>
         <div class="components__code">
-        <div class="main-nav">
-        <nav class="main-nav__container">
-            <div class="main-nav__logo">
-                <span>dots</span><br>
-                <span>and</span><br>
-                <span>lines</span>
+            <div class="main-nav">
+                <nav class="main-nav__container">
+                    <div class="main-nav__logo">
+                        <span>dots</span><br>
+                        <span>and</span><br>
+                        <span>lines</span>
+                    </div>
+                    <div class="main-nav__menu">
+                    <a href="#">contact</a>
+                    <a href="#">menu</a>
+                    </div>
+                </nav>
             </div>
-            <div class="main-nav__menu">
-            <a href="#">contact</a>
-            <a href="#">menu</a>
-            </div>
-        </nav>
-        </div>
         </div>
     </article>
+
+<!-- COMPONENTS HERO-->
+<article class="components">
+        <h3 class="components__name">Hero</h3>
+        <div class="components__img">
+            <img srcset="img/cover_section1.png 2x" src="img/cover_section1.png" alt="Hero"/>
+        </div>
+        <div class="components__code">
+            <div class="hero__title-wrap">
+            <div class="hero__static">and</div>
+            <div class="hero__viewport">
+                <div class="hero__word-track">
+                <span>dots</span>
+                <span>lines</span>
+                <span>strategy</span>
+                <span>identity</span>
+                <span>experience</span>
+                <span>technology</span>
+                <span>activation</span>
+                <span>solutions</span>
+                </div>
+            </div>
+            </div>
+            </div>
+    </article>
+
+<!-- COMPONENTS COVER-->
+    <article class="components">
+        <h3 class="components__name">Cover</h3>
+        <div class="components__img">
+            <img srcset="img/cover_section3.png 2x" src="img/cover_section3.png" alt="Cover"/>
+        </div>
+        <div class="components__code">
+            <img class="cover__img" src="../../dotsandlines-case-study/img/video_placement.png" alt="Video Placement"/>
+            <p class="cover__text">Wir gestaltenLösungen für Menschen, Marken & digitale Produkte.</p>
+        </div>
+    </article>
+
+    <!-- COMPONENTS CLIENT STRIP-->
+    <article class="components">
+        <h3 class="components__name">Client Strip</h3>
+        <div class="components__img">
+            <img srcset="img/client_list.png 2x" src="img/client_list.png" alt="Client List"/>
+        </div>
+        <div class="components__code">
+            <p class="client__list-title">Ausgewählte Kund:innen</p>
+        </div>
+    </article>
+
+
+<!-- COMPONENTS CURSOR-->
+    <article class="components">
+        <h3 class="components__name">Trailing Cursor</h3>
+        <div class="components__img">
+            <img srcset="img/cursordot.png 2x" src="img/cursordot.png" alt="Trailing Cursor"/>
+        </div>
+        <div class="components__code">
+            <div class="cursor"></div>
+            <p> Please move your cursor around to see effect</p>
+        </div>
+    </article>
+
+
+<script>
+const cursor = document.querySelector('.cursor');
+
+let mouseX = 0;
+let mouseY = 0;
+
+let posX = 0;
+let posY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animate() {
+  posX += (mouseX - posX) * 0.08;
+  posY += (mouseY - posY) * 0.08;
+
+  cursor.style.left = posX + 'px';
+  cursor.style.top = posY + 'px';
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
   </body>
 </html>
