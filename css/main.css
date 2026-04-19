@@ -183,7 +183,50 @@ img {
 /**
 *Components - CLIENT STRIP
 */
+.logo-strip {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 4rem);
+  width: max-content;
+
+  animation: scrollLeft 25s linear infinite;
+}
+
+.logo-track img {
+  height: clamp(20px, 5vw, 60px); 
+  width: auto;
+  flex-shrink: 0;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/**
+*Components - BUTTON
+*/
+.button__solutions {
+    display: inline-block;
+    border-radius: 40px;
+    border: 0.5px solid black;
+    padding: 10px 20px;
+}
+
+
+/**
+*Components - PROJECT CARDS
+*/
 
 /**
 *Components - CURSOR
