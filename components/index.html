@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="../css/main.css"/>
     
   </head>
   <body>
-    <h1>Web Components</h1>
+    <h1 class="page__heading">Web Components</h1>
 
     <h2>Typography Default</h2>
     <article class="components">
@@ -29,7 +30,7 @@
     </div>
     </article>
 
-        <article class="components">
+    <article class="components">
         <h3 class="components__name">heading (h1, h2, h3...)</h3>
         <div class="components__img">
             <img srcset="img/head1.png 2x" src="img/head1.png" alt="Heading 1"/>
@@ -45,5 +46,26 @@
     </div>
     </article>
 
+    <article class="navbar">
+        <h3 class="components__name">Nav Bar</h3>
+        <div class="components__img">
+        <img srcset="img/main-nav.png 2x" src="img/main_nav.png" alt="Nav Bar"/>
+        </div>
+        <div class="components__code">
+        <div class="main-nav">
+        <nav class="main-nav__container">
+            <div class="main-nav__logo">
+                <span>dots</span><br>
+                <span>and</span><br>
+                <span>lines</span>
+            </div>
+            <div class="main-nav__menu">
+            <a href="#">contact</a>
+            <a href="#">menu</a>
+            </div>
+        </nav>
+        </div>
+        </div>
+    </article>
   </body>
 </html>

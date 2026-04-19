@@ -43,14 +43,23 @@ h4 {
     font-size: 2rem;
     font-weight: 450;
 }
+
 img {
     max-width: 100%;
     display: block;
 }
 
+.page__heading {
+    font-size: 2rem;
+    font-weight: 550;
+}
 /**
 *Components
 */
+.components__name {
+    font-size: 2rem;
+    font-weight: 550;
+}
 
 .components img {
     max-width: initial;
@@ -59,8 +68,49 @@ img {
 .components__img {
     border: 1px solid black;
     overflow-x: auto;
+    padding: 10px;
 }
 
 .components__code {
     border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.main-nav {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.main-nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.main-nav__logo {
+    height: auto;
+    line-height: 0.9;
+    display: inline-block;
+    white-space: normal;
+}
+
+.main-nav__menu {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.main-nav__menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.main-nav__menu a:hover {
+  text-decoration: underline;
 }
