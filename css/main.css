@@ -252,6 +252,87 @@ img {
 .project__cards p {
     margin: 10px;
 }
+
+/**
+*Components - SERVICES
+*/
+.services__heading {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.services__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* LEFT */
+.services__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services__item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 4rem;
+    font-weight: 650;
+    line-height: 1.1;
+    color: #aaa; /* inactive = grey */
+    transition: color 0.3s;
+}
+
+.services__item.active {
+    color: #000; /* active = black */
+}
+
+.services__num {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.services__dot {
+    opacity: 0;
+    font-size: 5rem;
+    transition: opacity 0.3s;
+}
+
+.services__item.active .services__dot {
+    opacity: 1;
+}
+
+/* MIDDLE */
+.services__subitems {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.services__subitems.active {
+    display: flex;
+}
+
+.services__subitems p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* RIGHT */
+.services__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /**
 *Components - CURSOR
 */
