@@ -227,7 +227,31 @@ img {
 /**
 *Components - PROJECT CARDS
 */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.project__cards {
+    overflow: hidden;
+}
 
+.project__cards img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform: scale(1) translateY(0);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project__cards:hover img {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.project__cards h2,
+.project__cards p {
+    margin: 10px;
+}
 /**
 *Components - CURSOR
 */
