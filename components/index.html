@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="../css/main.css"/>
     
@@ -142,7 +141,7 @@
         </div>
         <div class="components__code">
             <div class="button">
-            <p class="button__solutions">all solutions <i class="fa-solid fa-square-arrow-up-right"></i></p>
+            <a href="#" class="button__solutions">all solutions ↗ </a>
             </div>
         </div>
     </article>
@@ -278,38 +277,63 @@
             <section class="testimonials">
                 <div class="testimonials__track">
                 <div class="testimonials__card">
-                    <div class="testimonials__quote"></div>
+                    <div class ="testimonials__body">
                         <p class="testimonials__text">Full Service, Co-Creation und Kundenorientierung auf höchsten Niveau.</p>
+                        <div class="testimonials__quote">"</div>
+                    </div>
                         <div class="testimonials__author">
                             <strong>Toblas Schaller</strong>
                             <span>Managing Director, moveblue</span>
                         </div>
                 </div>
                 <div class="testimonials__card">
-                    <div class="testimonials__quote"></div>
+                    <div class ="testimonials__body">
                         <p class="testimonials__text">Full Service, Co-Creation und Kundenorientierung auf höchsten Niveau.</p>
+                        <div class="testimonials__quote">"</div>
+                    </div>
                         <div class="testimonials__author">
                             <strong>Toblas Schaller</strong>
                             <span>Managing Director, moveblue</span>
                         </div>
                 </div>
                 <div class="testimonials__card">
-                    <div class="testimonials__quote"></div>
+                    <div class ="testimonials__body">
                         <p class="testimonials__text">Full Service, Co-Creation und Kundenorientierung auf höchsten Niveau.</p>
+                        <div class="testimonials__quote">"</div>
+                    </div>
                         <div class="testimonials__author">
                             <strong>Toblas Schaller</strong>
                             <span>Managing Director, moveblue</span>
                         </div>
+                    </div>
                 </div>
                 <div class="testimonials__footer">
                     <a href="#" class="testimonials__cta">partnerschaft anfragen ↗</a>
                 </div>
-                </div>
             </section>
         </div>
     </article>
-    
-            
+
+<!-- COMPONENTS IMG SWAP-->
+<article class="components">
+    <h3 class="components__name">Image Swap</h3>
+        <div class="components__img">
+            <img srcset="img/imgswap.png 2x" src="img/imgswap.png" alt="Image Swap"/>
+        </div>
+    <div class="components__code">
+        <div class="img-swap__combo">
+            <p class="img-swap__text">and</p>
+            <div class="img-swap">
+                <img class="img-swap__default" src="../../dotsandlines-case-study/img/you.jpeg" alt="default"/>
+                <img class="img-swap__hover" src="../../dotsandlines-case-study/img/you1.jpeg" alt="hover 1"/>
+                <img class="img-swap__hover" src="../../dotsandlines-case-study/img/you2.jpeg" alt="hover 2"/>
+                <img class="img-swap__hover" src="../../dotsandlines-case-study/img/you3.jpeg" alt="hover 3"/>
+                <img class="img-swap__hover" src="../../dotsandlines-case-study/img/you4.jpeg" alt="hover 4"/>
+            </div>
+        </div>
+    </div>
+</article>
+
 <!-- COMPONENTS CURSOR-->
     <article class="components">
         <h3 class="components__name">Trailing Cursor</h3>
@@ -348,6 +372,18 @@ function animate() {
 }
 
 animate();
+
+document.querySelectorAll('.img-swap').forEach(swap => {
+    const imgs = swap.querySelectorAll('img');
+    let current = 0;
+
+    swap.addEventListener('mouseenter', () => {
+        imgs[current].style.opacity = 0;
+        current = (current + 1) % imgs.length;
+        imgs[current].style.opacity = 1;
+    });
+});
+
 </script>
   </body>
 </html>
