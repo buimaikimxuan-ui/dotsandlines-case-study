@@ -284,12 +284,12 @@ img {
     font-size: 4rem;
     font-weight: 650;
     line-height: 1.1;
-    color: #aaa; /* inactive = grey */
+    color: #000;
     transition: color 0.3s;
 }
 
 .services__item.active {
-    color: #000; /* active = black */
+    color: #000;
 }
 
 .services__num {
