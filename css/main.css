@@ -23,6 +23,10 @@ body {
     line-height: 1.2;
     font-weight: 400;
     padding-left: 200px;
+    background-image: 
+        linear-gradient(to right, rgba(238, 136, 41, 0.469) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(238, 136, 41, 0.469) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 h1, h2, h3, h4 {
@@ -56,8 +60,13 @@ img {
 }
 
 .page__heading {
-    font-size: 2rem;
-    font-weight: 550;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--orange);
+    border: 5px solid var(--blue);
+    border-radius: 999px;
 }
 
 /**
@@ -72,13 +81,14 @@ img {
     padding: 2rem 1rem;
     border-right: 1px solid var(--black);
     overflow-y: auto;
-    background: var(--white);
+    background: var(--blue);
     z-index: 100;
 }
 
 .sidebar__title {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
+    color: var(--orange);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
@@ -86,7 +96,8 @@ img {
 
 .sidebar__list {
     list-style: none;
-    padding: 0
+    text-align: right;
+    padding: 0;
     margin: 0;
     gap: 0.5rem;
 }
@@ -94,14 +105,16 @@ img {
 .sidebar__list a {
     text-decoration: none;
     font-size: 0.85rem;
+    font-weight: 500;
     transition: color 0.2s;
     color: var(--black);
 }
 
-.sidebar__list a:hoover,
+.sidebar__list a:hover,
 .sidebar__list a.active {
     color: var(--orange);
 }
+
 /**
 *Components
 */
@@ -109,6 +122,7 @@ img {
 .components__name {
     font-size: 2rem;
     font-weight: 550;
+    border: 3px dashed var(--orange);
 }
 
 .components img {
@@ -284,7 +298,7 @@ img {
     font-weight: 500;
 }
 
-.button__solutions:hoover {
+.button__solutions:hover {
     color: var(--black);
     background: var(--white);
 }
@@ -482,7 +496,7 @@ img {
     padding: 15px 25px;
 }
 
-.testimonials__cta:hoover {
+.testimonials__cta:hover {
     background: var(--white);
     color: var(--black);
 }
@@ -603,7 +617,7 @@ img {
     transition: background 0.3s;
 }
 
-.banner__cta:hoover {
+.banner__cta:hover {
     background: var(--black);
     color: var(--white);
 }
@@ -617,6 +631,7 @@ img {
     font-size: 1.5rem;
     font-weight: 200;
 }
+
 /**
 *Components - CURSOR
 */
