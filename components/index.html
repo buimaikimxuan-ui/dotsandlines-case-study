@@ -404,6 +404,7 @@
         </div>
         <div class="components__code">
             <p class="components__label">CODE</p>
+            <p>Pinned to bottom. Click X to close or refresh to see banner again.</p>
             <div class="banner">
                 <p class="banner__heading">
                     <span>Du stehst vor strategischen</span>
@@ -413,7 +414,7 @@
                 <p class="banner__text">Lass uns näher darüber sprechen. Jetzt kostenloses Erstgespräch anfragen.</p>
                 <div class="banner__actions">
                     <a href="#" class="banner__cta">Termin vereinbaren ↗ </a>
-                    <button class="banner__close">X</button>
+                    <button class="banner__close">x</button>
                 </div>
             </div>
         </div>
@@ -469,6 +470,10 @@ document.querySelectorAll('.img-swap').forEach(swap => {
         current = (current + 1) % imgs.length;
         imgs[current].style.opacity = 1;
     });
+});
+
+document.querySelector('.banner__close').addEventListener('click', () => {
+    document.querySelector('.banner').style.display = 'none';
 });
 
 </script>
