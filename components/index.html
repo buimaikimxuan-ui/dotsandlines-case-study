@@ -14,11 +14,31 @@
     
   </head>
   <body>
+    <nav class="sidebar">
+        <p class="sidebar__title">Components</p>
+        <ul class="sidebar__list">
+            <li><a href="#body">body</a></li>
+            <li><a href="#heading">heading</a></li>
+            <li><a href="#navbar">nav bar</a></li>
+            <li><a href="#hero">hero</a></li>
+            <li><a href="#cover">cover</a></li>
+            <li><a href="#client-strip">client strip</a></li>
+            <li><a href="#button">button</a></li>
+            <li><a href="#project-cards">project cards</a></li>
+            <li><a href="#service-list">service list</a></li>
+            <li><a href="#testimonials">testimonials</a></li>
+            <li><a href="#image-swap">image swap</a></li>
+            <li><a href="#footer">footer</a></li>
+            <li><a href="#sticky-banner">sticky banner</a></li>
+            <li><a href="#trailing-cursor">trailing cursor</a></li>
+        </ul>
+    </nav>
+
     <h1 class="page__heading">Web Components</h1>
 
 <!-- TYPOGRAPHY -->
     <h2>Typography Default</h2>
-    <article class="components">
+    <article class="components" id="body">
         <h3 class="components__name">body</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -36,7 +56,7 @@
 
 <!-- COMPONENTS -->
 <!-- COMPONENTS HEADING -->
-    <article class="components">
+    <article class="components" id="heading">
         <h3 class="components__name">heading (h1, h2, h3...)</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -55,7 +75,7 @@
     </article>
 
 <!-- COMPONENTS MAIN NAV-->
-    <article class="components">
+    <article class="components" id="navbar">
         <h3 class="components__name">Nav Bar</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -80,7 +100,7 @@
     </article>
 
 <!-- COMPONENTS HERO-->
-<article class="components">
+<article class="components" id="hero">
         <h3 class="components__name">Hero</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -107,7 +127,7 @@
     </article>
 
 <!-- COMPONENTS COVER-->
-    <article class="components">
+    <article class="components" id="cover">
         <h3 class="components__name">Cover</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -121,7 +141,7 @@
     </article>
 
     <!-- COMPONENTS CLIENT STRIP-->
-    <article class="components">
+    <article class="components" id="client-strip">
         <h3 class="components__name">Client Strip</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -146,7 +166,7 @@
 
 
 <!-- COMPONENTS BUTTON-->
-    <article class="components">
+    <article class="components" id="button">
         <h3 class="components__name">Button</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -161,7 +181,7 @@
     </article>
 
 <!-- COMPONENTS PROJECT CARDS-->
-    <article class="components">
+    <article class="components" id="project-cards">
         <h3 class="components__name">Project Cards</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -190,7 +210,7 @@
     </article>
 
 <!-- COMPONENTS SERRVICE LIST-->
-    <article class="components">
+    <article class="components" id="service-list">
         <h3 class="components__name">Service List</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -286,7 +306,7 @@
     </article>
 
 <!-- TESTIMONIALS-->
-    <article class="components">
+    <article class="components" id="testimonials">
         <h3 class="components__name">Testimonials</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -357,7 +377,7 @@
 </article>
 
 <!-- COMPONENTS FOOTER-->
-<article class="components">
+<article class="components" id="image-swap">
     <h3 class="components__name">Footer</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -396,7 +416,7 @@
 </article>
 
 <!-- COMPONENTS STICKY BANNER-->
-    <article class="components">
+    <article class="components" id="sticky-banner">
         <h3 class="components__name">Sticky Banner</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -421,7 +441,7 @@
     </article>
             
 <!-- COMPONENTS CURSOR-->
-    <article class="components">
+    <article class="components" id="trailing-cursor">
         <h3 class="components__name">Trailing Cursor</h3>
         <div class="components__img">
             <p class="components__label">SCREENSHOT</p>
@@ -474,6 +494,26 @@ document.querySelectorAll('.img-swap').forEach(swap => {
 
 document.querySelector('.banner__close').addEventListener('click', () => {
     document.querySelector('.banner').style.display = 'none';
+});
+
+const sections = document.querySelectorAll('.components[id]');
+const navLinks = document.querySelectorAll('.sidebar__list a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
 });
 
 </script>
