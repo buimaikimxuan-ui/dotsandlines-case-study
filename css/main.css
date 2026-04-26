@@ -3,8 +3,9 @@
     --black: #000;
     --white:#fff;
     --gray: #9b9999;
-    --orange: #b35600;
-    --blue: rgb(0, 105, 210);
+    --orange: #c96100;
+    --blue: rgb(211, 230, 250);
+    --greenneon: #e0ff16f7;
 }
 html {
   box-sizing: border-box;
@@ -510,6 +511,38 @@ img {
     align-self: flex-end;
 }
 
+/**
+*Components - STICKY BANNER
+*/
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    z-index: 999;
+    background: var(--greenneon);
+}
+
+.banner__heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.banner__text {
+    font-size: 0.5rem;
+}
+
+.banner__actions {
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    padding: 10px 30px;
+}
 /**
 *Components - CURSOR
 */
