@@ -93,13 +93,31 @@ img {
     z-index: 100;
 }
 
+.sidebar__logo {
+    padding: 0;
+    margin: 0;
+}
+
+.website__link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    color: var(--black);
+}
+
+.website__link:hover {
+    color: var(--orange);
+}
+
 .sidebar__title {
     font-size: 1rem;
     font-weight: 700;
     color: var(--orange);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin-top: 3rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .sidebar__list {
@@ -122,6 +140,27 @@ img {
 .sidebar__list a.active {
     color: var(--orange);
 }
+
+.backto__top {
+    margin-top: 20rem;
+    text-align: right;
+}
+
+.backto__top-text {
+    text-decoration: none;
+    color: var(--black);
+}
+.backto__top a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.backto__top a:hover,
+.backto__top a:active {
+    color: var(--orange);
+}
+
 
 /**
 *Components
