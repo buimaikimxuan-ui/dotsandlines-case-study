@@ -69,6 +69,14 @@ img {
     border-radius: 999px;
 }
 
+.typography__type {
+    font-size: 2rem;
+    font-weight: 550;
+    text-align: right;
+    padding: 0;
+    padding-right: 20px;
+    margin: 0;
+}
 /**
 *Side Bar
 */
@@ -122,7 +130,7 @@ img {
 .components__name {
     font-size: 2rem;
     font-weight: 550;
-    border: 3px dashed var(--orange);
+    border-bottom: 3px dashed var(--orange);
 }
 
 .components img {
@@ -133,6 +141,7 @@ img {
     border: 1px solid var(--black);
     overflow-x: auto;
     padding: 10px;
+    margin: 20px;
 }
 
 .components__code {
