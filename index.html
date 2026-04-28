@@ -4,10 +4,137 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title> Home | dots and lines Case Study</title>
-
+    <title>Home | dots and lines Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css"/>
   </head>
   <body>
-    <h1> Home Page goes here</h1>
+    <!--MAIN NAV-->
+    <article class="navbar">
+      <div class="main-nav">
+        <nav class="main-nav__container">
+          <div class="main-nav__logo">
+            <span>dots</span><br>
+            <span>and</span><br>
+            <span>lines</span>
+          </div>
+          <div class="main-nav__menu">
+            <a href="#">contact</a>
+            <a href="#">menu</a>
+          </div>
+        </nav>
+      </div>
+    </article>
+
+<!--HERO-->
+    <article class="hero__title-wrap">
+      <div class="hero__static">and</div>
+        <div class="hero__viewport">
+          <div class="hero__word-track">
+            <span>dots</span>
+            <span>lines</span>
+            <span>strategy</span>
+            <span>identity</span>
+            <span>experience</span>
+            <span>technology</span>
+            <span>activation</span>
+            <span>solutions</span>
+          </div>
+        </div>
+    </article>
+
+<!--HERO VIDEO-->
+    <video 
+    src="img/hero-video.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline>
+</video>
+
+
+
+<!--STICKY BANNER-->
+    <article class="banner">
+      <p class="banner__heading">
+        <span>Du stehst vor strategischen</span>
+        <span>und kreativen</span>
+        <span>Herausforderungen?</span>
+      </p>
+      <p class="banner__text">Lass uns näher darüber sprechen. Jetzt kostenloses Erstgespräch anfragen.</p>
+      <div class="banner__actions">
+          <a href="#" class="banner__cta">Termin vereinbaren ↗ </a>
+          <button class="banner__close">x</button>
+      </div>
+    </article>
+            
+<!--CURSOR-->
+    <div class="cursor"></div>
+
+<script>
+const cursor = document.querySelector('.cursor');
+
+let mouseX = 0;
+let mouseY = 0;
+
+let posX = 0;
+let posY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animate() {
+  posX += (mouseX - posX) * 0.08;
+  posY += (mouseY - posY) * 0.08;
+
+  cursor.style.left = posX + 'px';
+  cursor.style.top = posY + 'px';
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+document.querySelectorAll('.img-swap').forEach(swap => {
+    const imgs = swap.querySelectorAll('img');
+    let current = 0;
+
+    swap.addEventListener('mouseenter', () => {
+        imgs[current].style.opacity = 0;
+        current = (current + 1) % imgs.length;
+        imgs[current].style.opacity = 1;
+    });
+});
+
+document.querySelector('.banner__close').addEventListener('click', () => {
+    document.querySelector('.banner').style.display = 'none';
+});
+
+const sections = document.querySelectorAll('.components[id]');
+const navLinks = document.querySelectorAll('.sidebar__list a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+</script>
   </body>
 </html>
