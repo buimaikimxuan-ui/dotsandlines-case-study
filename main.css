@@ -136,6 +136,13 @@ h4 {
   line-height: 1;
 }
 
+.hero__video {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+}
+
 /* KEY ANIMATION */
 @keyframes slideUp {
   0% {
