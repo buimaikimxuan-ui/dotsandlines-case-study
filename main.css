@@ -17,7 +17,7 @@ html {
 
 body {
     font-family: var(--font-sans-serif);
-    line-height: 1.2;
+    line-height: 1.1;
     font-weight: 400;
     margin: 30px;
 }
@@ -97,7 +97,6 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 30px;
 }
 
 .hero__slot {
@@ -154,9 +153,9 @@ h4 {
 
 .hero__viewport {
     position: absolute;
-    top:20rem;
+    top: 20rem;
     left: 0;
-    height: rem;
+    height: 10rem;
     overflow: hidden;
 }
 
@@ -554,24 +553,28 @@ h4 {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 10rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     align-items: center;
-    gap: 2rem;
-    padding: 0.8rem 1rem;
+    gap: 3rem;
     z-index: 999;
     background: var(--greenneon);
 }
 
 .banner__heading {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.1;
-    margin: 0;
+    margin: 20px;
+    display: grid;
+    flex-direction: row;
+    align-self: center;
 }
 
 .banner__text {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -583,7 +586,7 @@ h4 {
 
 .banner__cta {
     display: inline-flex;
-    font-size: 1rem;
+    font-size: 1.6rem;
     align-items: center;
     gap: 0.5rem;
     border: 1px solid var(--black);
@@ -603,11 +606,10 @@ h4 {
 .banner__close {
     background: none;
     border: none;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     cursor: pointer;
-    padding: 10px;
-    font-size: 1.5rem;
     font-weight: 200;
+    margin: 10px;
 }
 
 /**
