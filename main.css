@@ -94,46 +94,99 @@ h4 {
 *HERO
 */
 .hero__title-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-family: Inter, sans-serif;
-  margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.hero__slot {
+    position: relative;
+    height: 30rem;
+}
+
+.hero__intro-clip {
+    overflow: hidden;
+    left: 0;
+    top: 0;
+}
+
+.hero__intro-viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    animation-delay: 1s; /* holds f or 2s then slides away */
+}
+
+.hero__intro {
+    font-size: 10rem;
+    font-weight: 600;
+    line-height: 1;
+    transform: translateY(100%);
+    animation: introIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+               introAway 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards 2s;
+}
+
+.hero__intro:last-child {
+    animation-delay: 0.2s, 2.2s; /* stagger in, stagger away */
 }
 
 .hero__static {
-  font-size: 15rem;
-  font-weight: 600;
+    font-size: 10rem;
+    font-weight: 600;
+    line-height: 1;
+    transform: translateY(100%);
+    animation: introIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.1s;
+    /* no introAway — stays forever */
 }
 
+@keyframes introIn {
+    0%   { transform: translateY(100%);}
+    100% { transform: translateY(0);}
+}
+
+@keyframes introAway {
+    0%   { transform: translateY(0);}
+    100% { transform: translateY(-100%);}
+}
+
+/* ROLLING: strategy, identity etc start after intro leaves */
 .hero__viewport {
-  height: 6rem;
-  overflow: hidden;
-  position: relative;
-}
-
-@keyframes slideUp {
-    0%   { transform: translateY(0); }
-    12%  { transform: translateY(-12.5%); }
-    25%  { transform: translateY(-25%); }
-    37%  { transform: translateY(-37.5%); }
-    50%  { transform: translateY(-50%); }
-    62%  { transform: translateY(-62.5%); }
-    75%  { transform: translateY(-75%); }
-    95%  { transform: translateY(-87.5%); }
-    100% { transform: translateY(0); }
+    position: absolute;
+    top:20rem;
+    left: 0;
+    height: 10rem;
+    overflow: hidden;
 }
 
 .hero__word-track {
     display: flex;
     flex-direction: column;
-    animation: slideUp 8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    animation: slideUp 2s linear forwards;
+    animation-delay: 2.6s; /* starts when intro finishes leaving */
+    transform: translateY(100%);
+    animation-fill-mode: both;
 }
 
 .hero__word-track span {
-  font-size: 15rem;
-  font-weight: 600;
-  line-height: 1;
+    font-size: 10rem;
+    font-weight: 600;
+    line-height: 1;
+    height: 10rem;
+}
+
+@keyframes slideUp {
+    0%   { transform: translateY(100%); }
+    5%   { transform: translateY(0); }
+    20%  { transform: translateY(-16.6%); }
+    35%  { transform: translateY(-33.3%); }
+    50%  { transform: translateY(-50%); }
+    65%  { transform: translateY(-66.6%); }
+    80%  { transform: translateY(-83.3%); }
+    100% { transform: translateY(-83.3%); }
 }
 
 .hero__video {
@@ -141,17 +194,10 @@ h4 {
     height: 50vh;
     object-fit: cover;
     display: block;
+    padding: 30px;
 }
 
-/* KEY ANIMATION */
-@keyframes slideUp {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-87.5%);
-  }
-}
+
 /**
 *Components - COVER
 */
