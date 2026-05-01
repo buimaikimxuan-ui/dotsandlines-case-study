@@ -58,8 +58,32 @@
 
 <!--HERO VIDEO-->
   <video class="hero__video" src="img/hero-video.mp4" autoplay muted loop playsinline></video>
+<!--COVER TEXT-->
+  <p class="cover__text">Wir gestalten Lösungen für Menschen, Marken & digitale Produkte.</p>
 
+<!--  CLIENT STRIP-->
+    <article class="components" id="client-strip">
+        <h3 class="components__name">Client Strip</h3>
+        <div class="components__img">
+            <p class="components__label">SCREENSHOT</p>
+            <img srcset="img/client_list.png 2x" src="img/client_list.png" alt="Client List"/>
+        </div>
+        <div class="components__code">
+            <p class="components__label">CODE</p>
+            <p class="client__list-title">Ausgewählte Kund:innen</p>
+            <div class="logo-strip">
+                <div class="logo-track">
+                    <img src="../../dotsandlines-case-study/img/logo_ikea.png" alt="Ikea Logo">
+                    <img src="../../dotsandlines-case-study/img/logo_generali.png" alt="Generali Logo">
+                    <img src="../../dotsandlines-case-study/img/logo_efa.png" alt="EFA Logo">
 
+                    <img src="../../dotsandlines-case-study/img/logo_ikea.png" alt="Ikea Logo">
+                    <img src="../../dotsandlines-case-study/img/logo_generali.png" alt="Generali Logo">
+                    <img src="../../dotsandlines-case-study/img/logo_efa.png" alt="EFA Logo">
+                </div>
+                </div>
+        </div>
+    </article>
 
 <!--STICKY BANNER-->
     <article class="banner">
@@ -137,6 +161,14 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+const video = document.querySelector('.hero__video');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const scale = Math.max(0.1, 1 - scrollY / 2000);
+    video.style.transform = `scale(${scale})`;
 });
 
 </script>
