@@ -24,12 +24,12 @@ body {
 
 h1, h2, h3, h4 {
     font-family: var(--font-sans-serif);
-    line-height: 0.9;
+    line-height: 1.1;
 }
 
 h1 {
     font-size: 7rem;
-    font-weight: 650;
+    font-weight: 600;
 }
 
 h2 {
@@ -201,25 +201,8 @@ h4 {
     padding-top: 50px;
 }
 
-
 /**
-*Components - COVER
-*/
-.cover__text {
-    font-size: 7rem;
-    font-weight: 650;
-}
-
-.cover__img {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: cover;
-  display: block;
-}
-
-/**
-*Components - CLIENT STRIP
+*CLIENT STRIP
 */
 .logo-strip {
   overflow: hidden;
@@ -232,8 +215,7 @@ h4 {
   align-items: center;
   gap: clamp(1rem, 4vw, 4rem);
   width: max-content;
-
-  animation: scrollLeft 25s linear infinite;
+  animation: scrollLeft 10s linear infinite;
 }
 
 .logo-track img {
