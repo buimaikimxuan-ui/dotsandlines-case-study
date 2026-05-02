@@ -234,31 +234,28 @@ h4 {
 }
 
 /**
-*Components - BUTTON
+*PROJECT CARDS
 */
-.button__solutions {
-    display: inline-block;
-    border-radius: 999px;
-    border: 0.5px solid var(--black);
-    color: var(--black);
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 500;
+.project-cards {
+    overflow-x: auto;
+    scrollbar-width: none;
+    cursor: grab;
 }
 
-.button__solutions:hover {
-    color: var(--black);
-    background: var(--white);
+.project-cards:active {
+    cursor: grabbing;
 }
 
-/**
-*Components - PROJECT CARDS
-*/
 .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
     gap: 20px;
+    width: max-content; /* lets it grow as wide as needed */
+    user-select: none;
+}
+
+.project__cards {
+    flex: 0 0 400px; /* fixed width, won't shrink */
 }
 
 .project__img-wrap {
@@ -268,7 +265,7 @@ h4 {
     overflow: hidden;
 }
 
-.components .project__img-wrap img {
+.project__img-wrap img {
     position: absolute;
     top: 0;
     left: 0;
@@ -284,11 +281,6 @@ h4 {
 
 .project__cards:hover .project__img-wrap img {
     transform: scale(1.1);
-}
-
-.project__cards h2,
-.project__cards p {
-    margin: 10px;
 }
 
 /**
