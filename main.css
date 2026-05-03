@@ -697,7 +697,47 @@ h4 {
     background: var(--white);
     color: var(--black);
 }
+/**
+*ABOUT US
+*/
+.aboutus {
+    margin-top: 7rem;
+}
 
+.aboutus__heading{
+    font-size: 1.5rem;
+    font-weight: 450;
+    line-height: 0.8;
+}
+
+.aboutus__details {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.aboutus__button {
+    margin-top: 3.5rem;
+}
+
+.aboutus__people {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-decoration: none;
+    background: var(--white);
+    border-radius: 999px;
+    padding: 15px 25px;
+    border: 1px solid var(--black);
+}
+
+.aboutus__people:hover{
+    background: var(--black);
+    color: var(--white);
+}
 /**
 *Components - FOOTER
 */
