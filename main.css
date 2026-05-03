@@ -373,7 +373,7 @@ h4 {
 
 
 /**
-*Components - SERVICES
+*SERVICES
 */
 .service {
     margin-top: 10rem;
@@ -514,6 +514,75 @@ h4 {
     color: var(--white);
     background: var(--black);
 }
+
+
+/**
+*STICKY BANNER
+*/
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    z-index: 999;
+    background: var(--greenneon);
+}
+
+.banner__heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 15px;
+    display: grid;
+    flex-direction: row;
+    align-self: center;
+}
+
+.banner__text {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.banner__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.banner__cta {
+    display: inline-flex;
+    font-size: 1.6rem;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--black);
+    border-radius: 999px;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: var(--black);
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.banner__cta:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.banner__close {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    font-weight: 200;
+    margin: 10px;
+}
+
 /**
 *Components - TESTIMONIALS
 */
@@ -632,73 +701,6 @@ h4 {
 
 .footer__credit {
     align-self: flex-end;
-}
-
-/**
-*Components - STICKY BANNER
-*/
-.banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    align-items: center;
-    gap: 3rem;
-    z-index: 999;
-    background: var(--greenneon);
-}
-
-.banner__heading {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.1;
-    margin: 20px;
-    display: grid;
-    flex-direction: row;
-    align-self: center;
-}
-
-.banner__text {
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0;
-}
-
-.banner__actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.banner__cta {
-    display: inline-flex;
-    font-size: 1.6rem;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid var(--black);
-    border-radius: 999px;
-    padding: 8px 15px;
-    text-decoration: none;
-    color: var(--black);
-    white-space: nowrap;
-    transition: background 0.3s;
-}
-
-.banner__cta:hover {
-    background: var(--black);
-    color: var(--white);
-}
-
-.banner__close {
-    background: none;
-    border: none;
-    font-size: 2.2rem;
-    cursor: pointer;
-    font-weight: 200;
-    margin: 10px;
 }
 
 /**
