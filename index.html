@@ -304,8 +304,8 @@
                         <div class="testimonials__quote">"</div>
                     </div>
                         <div class="testimonials__author">
-                            <strong>Toblas Schaller</strong>
-                            <span>Managing Director, moveblue</span>
+                            <strong>Albert Gruber</strong>
+                            <span>Co-Founder, seeqnc</span>
                         </div>
                 </div>
                 <div class="testimonials__card">
@@ -314,10 +314,9 @@
                         <div class="testimonials__quote">"</div>
                     </div>
                         <div class="testimonials__author">
-                            <strong>Toblas Schaller</strong>
-                            <span>Managing Director, moveblue</span>
+                            <strong>Nikolaus Sernetz</strong>
+                            <span>Managing Partner, Fenion</span>
                         </div>
-                    </div>
                 </div>
                 <div class="testimonials__card">
                     <div class ="testimonials__body">
@@ -325,8 +324,8 @@
                         <div class="testimonials__quote">"</div>
                     </div>
                         <div class="testimonials__author">
-                            <strong>Toblas Schaller</strong>
-                            <span>Managing Director, moveblue</span>
+                            <strong>Carina Fleck</strong>
+                            <span>Co-Founder, y.lab</span>
                         </div>
                     </div>
                 <div class="testimonials__card">
@@ -335,8 +334,8 @@
                         <div class="testimonials__quote">"</div>
                     </div>
                         <div class="testimonials__author">
-                            <strong>Toblas Schaller</strong>
-                            <span>Managing Director, moveblue</span>
+                            <strong>Anke Neiss</strong>
+                            <span>Leitung Produktmanagement, RZL Software</span>
                         </div>
                     </div>
                 <div class="testimonials__card">
@@ -345,10 +344,11 @@
                         <div class="testimonials__quote">"</div>
                     </div>
                         <div class="testimonials__author">
-                            <strong>Toblas Schaller</strong>
-                            <span>Managing Director, moveblue</span>
+                            <strong>Caroline Cornelius</strong>
+                            <span>Product Manager, Novartis</span>
                         </div>
                     </div>
+                </div>
                 <div class="testimonials__footer">
                     <a href="#" class="testimonials__cta">partnerschaft anfragen ↗</a>
                 </div>
@@ -477,6 +477,27 @@ serviceItems.forEach(item => {
         const activeImg = document.querySelector(`.services__image img[data-index="${index}"]`);
         activeImg.style.transform = 'translateY(0)'; 
 });
+});
+
+const testimonialTrack = document.querySelector('.testimonials__track');
+let testimonialDown = false;
+let testimonialStartX;
+let testimonialScrollLeft;
+
+testimonialTrack.addEventListener('mousedown', (e) => {
+    testimonialDown = true;
+    testimonialStartX = e.pageX - testimonialTrack.getBoundingClientRect().left;
+    testimonialScrollLeft = testimonialTrack.scrollLeft;
+});
+
+document.addEventListener('mouseup', () => testimonialDown = false);
+
+testimonialTrack.addEventListener('mousemove', (e) => {
+    if (!testimonialDown) return;
+    e.preventDefault();
+    const x = e.pageX - testimonialTrack.getBoundingClientRect().left;
+    const walk = (x - testimonialStartX) * 1.5;
+    testimonialTrack.scrollLeft = testimonialScrollLeft - walk;
 });
 
 </script>
