@@ -125,56 +125,56 @@
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <video class="project__video" src="https://cdn.sanity.io/files/y7n60qgt/production/2624f826c27a56b7e2b9a69c93c9286c3ce759e3.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <h2>Optimuse</h2>
                 <p>Industrie &amp; Innovation</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <img class="project__img" src="https://cdn.sanity.io/images/y7n60qgt/production/7425df51968b651694df9f4c94f338ae63f7da45-2160x2700.jpg?w=673&fm=webp" alt="Project Cards">
                 </div>
                 <h2>ASW Akademie</h2>
                 <p>Öffentlicher Sektor &amp; Bildung</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <img class="project__img" src="img/phone.webp" alt="Project Cards">
                 </div>
                 <h2>City Airport Train</h2>
                 <p>Wirtschaft &amp; Tourismus</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <video class="project__video" src="img/neweurope2022.mov" autoplay muted loop playsinline></video>
                 </div>
                 <h2>European Forum Alpbach</h2>
                 <p>Wirtschaft &amp; Tourismus</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <img class="project__img" src="img/apo.webp" alt="Project Cards">
                 </div>
                 <h2>Apothekerkammer</h2>
                 <p>Gesundheit &amp; Healthcare</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <video class="project__video" src="https://cdn.sanity.io/files/y7n60qgt/production/a20323cf07ae91e8a5c4e08586f7907f01e80e82.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <h2>Sport Fleiss</h2>
                 <p>Lifestyle &amp; Handel</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                    <img class="project__img" src="img/invest.webp" alt="Project Cards">
                 </div>
-                <h2>Kollitsch Inves</h2>
+                <h2>Kollitsch Invest</h2>
                 <p>Wirtschaft &amp; Tourismus</p>
             </div>
             <div class="project__cards">
                 <div class="project__img-wrap">
-                    <img class="project__img" src="img/project_card.png" alt="Project Cards">
+                  <video class="project__video" src="https://cdn.sanity.io/files/y7n60qgt/production/3d66388377801828fad8411e79ddfe352e0bf0ed.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <h2>ZUSA</h2>
                 <p>Energie &amp; Klima</p>
@@ -251,6 +251,7 @@ let startX;
 let scrollLeft;
 
 document.addEventListener('mousedown', (e) => {
+    e.preventDefault();
     isDown = true;
     startX = e.pageX - slider.getBoundingClientRect().left;
     scrollLeft = slider.scrollLeft;
