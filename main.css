@@ -33,8 +33,10 @@ h1 {
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 550;
+    margin: 0;
+    margin-top: 10px;
 }
 
 h3 {
@@ -274,9 +276,9 @@ h4 {
 
 .project__img-wrap {
     position: relative;
-    flex: 0 0 390px;
-    width: 390px;
-    height: 450px;
+    flex: 0 0 424px;
+    width: 424px;
+    height: 530px;
     overflow: hidden;
 }
 
@@ -308,6 +310,7 @@ h4 {
     object-fit: cover;
     pointer-events: none;
 }
+
 .project__cards:hover .project__img-wrap video {
     transform: scale(1.1);
 }
