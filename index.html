@@ -31,7 +31,7 @@
 <!--CURSOR-->
     <div class="cursor"></div>
 
-    <!--MAIN NAV-->
+<!--MAIN NAV-->
     <article class="navbar">
       <div class="main-nav">
         <nav class="main-nav__container">
@@ -182,7 +182,103 @@
         </div>
     </article>
 
+<!--SERRVICE LIST-->
+    <article class="service">
+                <p class="services__heading">Was wir machen</p>
+                <div class="services__layout">
+                    
+                    <!-- LEFT: service names -->
+                    <ul class="services__list">
+                        <li class="services__item active" data-index="0">
+                            <span class="services__num">01</span>
+                            <span class="services__name">strategy</span>
+                            <span class="services__dot">●</span>
+                        </li>
+                        <li class="services__item" data-index="1">
+                            <span class="services__num">02</span>
+                            <span class="services__name">identity</span>
+                            <span class="services__dot">●</span>
+                        </li>
+                        <li class="services__item" data-index="2">
+                            <span class="services__num">03</span>
+                            <span class="services__name">experience</span>
+                            <span class="services__dot">●</span>
+                        </li>
+                        <li class="services__item" data-index="3">
+                            <span class="services__num">04</span>
+                            <span class="services__name">technology</span>
+                            <span class="services__dot">●</span>
+                        </li>
+                        <li class="services__item" data-index="4">
+                            <span class="services__num">05</span>
+                            <span class="services__name">activation</span>
+                            <span class="services__dot">●</span>
+                        </li>
+                    </ul>
 
+                    <!-- MIDDLE: sub-items -->
+                    <div class="services__details">
+                        <div class="services__subitems active" data-index="0">
+                            <p>Research & Insights</p>
+                            <p>Markenstrategie & Beratung</p>
+                            <p>Customer Journey Mapping</p>
+                            <p>Markenarchitektur</p>
+                            <p>Markenpositionierung</p>
+                            <p>Brand Story</p>
+                            <p>Naming</p>
+                        </div>
+                        <div class="services__subitems" data-index="1">
+                            <p>Corporate Design</p>
+                            <p>Logogestaltung</p>
+                            <p>Typografie & Farbkonzept</p>
+                            <p>Visuelles Storytelling</p>
+                            <p>Verbale Identität</p>
+                            <p>Copywriting</p>
+                            <p>Brandbook & Brand Guidelines</p>
+                        </div>
+                        <div class="services__subitems" data-index="2">
+                            <p>User Research</p>
+                            <p>User Experience Design</p>
+                            <p>User Interface Design</p>
+                            <p>Visual Prototyping</p>
+                            <p>Design Systems</p>
+                            <p>Web Design</p>
+                        </div>
+                        <div class="services__subitems" data-index="3">
+                            <p>Software Architektur</p>
+                            <p>Native App Development</p>
+                            <p>Web App Development</p>
+                            <p>Infrastructure & Hosting</p>
+                            <p>Web Development</p>
+                            <p>KI-Beratung</p>
+                        </div>
+                        <div class="services__subitems" data-index="4">
+                            <p>Markenkommunikation</p>
+                            <p>Markenkampagnen</p>
+                            <p>Employer Branding</p>
+                            <p>Markenerlebnisse im Raum</p>
+                            <p>Brand Engagement</p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: image -->
+                    <div class="services__image">
+                        <img src="img/serviceimg.png" alt="strategy" />
+                    </div>
+                </div>
+    </article>
+
+<!--IMG SWAP-->
+  <article class="img-swap__combo">
+            <p class="img-swap__text">and</p>
+            <div class="img-swap">
+                <img class="img-swap__default" src="img/you.jpeg" alt="default"/>
+                <img class="img-swap__hover" src="img/you1.jpeg" alt="hover 1"/>
+                <img class="img-swap__hover" src="img/you2.jpeg" alt="hover 2"/>
+                <img class="img-swap__hover" src="img/you3.jpeg" alt="hover 3"/>
+                <img class="img-swap__hover" src="img/you4.jpeg" alt="hover 4"/>
+            </div>
+  </article>
 
 <script>
 const cursor = document.querySelector('.cursor');
@@ -265,6 +361,14 @@ document.addEventListener('mousemove', (e) => {
     const x = e.pageX - slider.getBoundingClientRect().left;
     const walk = (x - startX) * 1.5;
     slider.scrollLeft = scrollLeft - walk;
+});
+
+const video = document.querySelector('.hero__video');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const scale = Math.max(0.1, 1 - scrollY / 2000);
+    video.style.transform = `scale(${scale})`;
 });
 
 </script>
