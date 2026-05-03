@@ -743,34 +743,43 @@ h4 {
 }
 
 /**
-*Components - FOOTER
+*FOOTER
 */
 .footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
-    align-items: flex-start;
+    align-self: start;
 }
 
 .footer__logo {
     display: flex;
     flex-direction: column;
-    font-size: 4rem;
-    font-weight: 500;
-    line-height: 0.9;
+    font-size: 4.5rem;
+    font-weight: 550;
+    line-height: 0.8;
 }
 .footer__list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer__list-items a {
     color: var(--black);
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-weight: 450;
+    font-size: 1.6rem;
     line-height: 1.8;
 }
 
+.footer__list-items a:hover{
+    text-decoration: none;
+}
+
 .footer__credit {
-    align-self: flex-end;
+    grid-column: 4;
+    text-align: right;
+    align-self: end;
 }
 
 /**
