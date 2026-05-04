@@ -743,6 +743,33 @@ h4 {
 }
 
 /**
+*CONTACT
+*/
+.contact__heading {
+    font-size: 1.5rem;
+    font-weight: 450;
+    line-height: 0.8;
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 1rem;
+}
+
+.contact__details a {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 0;
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.contact__details a:hover {
+    text-decoration: none;
+}
+/**
 *FOOTER
 */
 .footer {
@@ -750,6 +777,7 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     align-self: start;
+    margin-top: 40px;
 }
 
 .footer__logo {
@@ -783,7 +811,7 @@ h4 {
 }
 
 /**
-*Components - CURSOR
+*CURSOR
 */
 
 .cursor {
