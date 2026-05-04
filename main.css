@@ -655,6 +655,7 @@ h4 {
     background: var(--white);
     color: var(--black);
 }
+
 /**
 *ABOUT US
 */
@@ -769,6 +770,45 @@ h4 {
 .contact__details a:hover {
     text-decoration: none;
 }
+
+/**
+*ADDRESS
+*/
+.address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    margin-top: 7rem;
+    gap: 20px;
+}
+
+.address__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.address__heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.address__details {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.address .img-swap {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.address .img-swap img {
+    width: 100%;
+    height: auto;
+}
+
 /**
 *FOOTER
 */
